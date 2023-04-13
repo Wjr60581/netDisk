@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Unit 10</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension ms-toolsai.jupyter */
+/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+.alert {
+    width: auto;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+#preview > .alert:last-child {
+    /* Prevent this being set to zero by the default notebook stylesheet */
+    padding-bottom: 1em;
+}
+
+.alert-success {
+    /* Note there is no suitable color available, so we just copy "info" */
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-info {
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-warning {
+    background-color: var(--theme-warning-background);
+    color: var(--theme-warning-foreground);
+}
+.alert-danger {
+    background-color: var(--theme-error-background);
+    color: var(--theme-error-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="unit-10">Unit 10</h1>
+<table>
+<thead>
+<tr>
+<th>Phrase</th>
+<th>Example</th>
+<th>翻译</th>
+<th>精准诠释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>clear out</em></td>
+<td>We need to <strong>clear out</strong> the storage room to make space for new items.</td>
+<td>我们需要把仓库里的物品全清出来，以便留出新物品的空间。</td>
+<td>清空</td>
+</tr>
+<tr>
+<td><em>check out</em></td>
+<td>I need to <strong>check out</strong> books before leaving the library.</td>
+<td>我需要在离开图书馆之前借阅一些书籍。</td>
+<td>借出</td>
+</tr>
+<tr>
+<td><em>no longer</em></td>
+<td>I <strong>no longer</strong> have time to watch TV dramas.</td>
+<td>我已经没有时间去看电视剧了。</td>
+<td>不再</td>
+</tr>
+<tr>
+<td><em>part with</em></td>
+<td>It's difficult for me to <strong>part with</strong> my childhood toys.</td>
+<td>我很难舍弃我的童年玩具。</td>
+<td>放弃</td>
+</tr>
+<tr>
+<td><em>as for</em></td>
+<td><strong>As for</strong> today's weather, it's quite cloudy with a chance of rain.</td>
+<td>至于今天的天气，它相当多云，有下雨的可能性。</td>
+<td>至于</td>
+</tr>
+<tr>
+<td><em>to be honest</em></td>
+<td><strong>To be honest</strong>, I didn't really like the movie we watched last night.</td>
+<td>说实话，昨晚我们看的电影我并不是很喜欢。</td>
+<td>说实话</td>
+</tr>
+<tr>
+<td><em>according to</em></td>
+<td><strong>According to</strong> the latest news, there will be a parade in the city center this weekend.</td>
+<td>根据最新消息，本周末市中心将有一次游行。</td>
+<td>根据</td>
+</tr>
+<tr>
+<td><em>close to</em></td>
+<td>This grocery store is <strong>close to</strong> my apartment, so I can easily walk there.</td>
+<td>这家杂货店就在我公寓附近，所以我可以轻松步行到那里。</td>
+<td>靠近</td>
+</tr>
+</tbody>
+</table>
+<h1 id="unit-01">Unit 01</h1>
+<table>
+<thead>
+<tr>
+<th>Phrase</th>
+<th>Example</th>
+<th>翻译</th>
+<th>精准诠释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>be born with</em></td>
+<td>She was <strong>born with</strong> a talent for singing.</td>
+<td>她天生具有唱歌的才华。</td>
+<td>天赋</td>
+</tr>
+<tr>
+<td><em>look up sth.</em></td>
+<td>I need to <strong>look up</strong> the meaning of this word in the dictionary.</td>
+<td>我需要查字典来查找这个词的意思。</td>
+<td>查阅</td>
+</tr>
+<tr>
+<td><em>word by word</em></td>
+<td>The teacher asked us to read the paragraph <strong>word by word</strong>.</td>
+<td>老师要求我们逐字逐句地阅读段落。</td>
+<td>逐字</td>
+</tr>
+<tr>
+<td><em>as well as</em></td>
+<td>He is good at playing tennis <strong>as well as</strong> basketball.</td>
+<td>他不仅擅长打篮球，也擅长打网球。</td>
+<td>以及</td>
+</tr>
+<tr>
+<td><em>have trouble doing sth.</em></td>
+<td>I <strong>have trouble</strong> falling asleep at night.</td>
+<td>晚上我入睡困难。</td>
+<td>困难</td>
+</tr>
+<tr>
+<td><em>pay attention to</em></td>
+<td>Please <strong>pay attention to</strong> the road while driving.</td>
+<td>驾车时请注意路况。</td>
+<td>注意</td>
+</tr>
+<tr>
+<td><em>connect with</em></td>
+<td>I want to <strong>connect with</strong> other writers and learn from them.</td>
+<td>我想与其他作家联系并向他们学习。</td>
+<td>联系</td>
+</tr>
+<tr>
+<td><em>learn from</em></td>
+<td>We can <strong>learn from</strong> our mistakes and try to do better next time.</td>
+<td>我们可以从错误中学习，并尝试下次做得更好。</td>
+<td>学习</td>
+</tr>
+</tbody>
+</table>
+<h1 id="unit-02">Unit 02</h1>
+<table>
+<thead>
+<tr>
+<th>Phrase</th>
+<th>Example</th>
+<th>翻译</th>
+<th>精准诠释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>lay out</em></td>
+<td>She <strong>laid out</strong> her clothes on the bed before packing them in the suitcase.</td>
+<td>在收拾衣服之前，她把衣服摆放在床上。</td>
+<td>摆放</td>
+</tr>
+<tr>
+<td><em>put on</em></td>
+<td>He <strong>put on</strong> his coat and went outside.</td>
+<td>他穿上外套出门了。</td>
+<td>穿上</td>
+</tr>
+<tr>
+<td><em>end up</em></td>
+<td>We planned to go to the beach, but we <strong>ended up</strong> staying home because it rained.</td>
+<td>我们计划去海滩，但因为下雨，我们最终没有去成。</td>
+<td>最终</td>
+</tr>
+</tbody>
+</table>
+<h1 id="unit-03">Unit 03</h1>
+<table>
+<thead>
+<tr>
+<th>Phrase</th>
+<th>Example</th>
+<th>翻译</th>
+<th>精准诠释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>pass by</em></td>
+<td>I <strong>pass by</strong> that store every day on my way to work.</td>
+<td>我每天上班路上都会经过那家商店。</td>
+<td>经过</td>
+</tr>
+<tr>
+<td><em>ask for</em></td>
+<td>If you need help, don't be afraid to <strong>ask for</strong> it.</td>
+<td>如果你需要帮助，不要害怕请求。</td>
+<td>请求</td>
+</tr>
+<tr>
+<td><em>spend sth. on (doing) sth.</em></td>
+<td>She <strong>spent</strong> all her money on <strong>buying</strong> a new car.</td>
+<td>她把所有钱都花在了买一辆新车上。</td>
+<td>花费钱财</td>
+</tr>
+<tr>
+<td><em>spend sth. (on sth./[in] doing sth.)</em></td>
+<td>I <strong>spent</strong> the whole weekend <strong>reading books</strong>.</td>
+<td>我整个周末都花在读书上了。</td>
+<td>花费时间</td>
+</tr>
+</tbody>
+</table>
+<h1 id="unit-04">Unit 04</h1>
+<table>
+<thead>
+<tr>
+<th>Phrase</th>
+<th>Example</th>
+<th>翻译</th>
+<th>精准诠释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>from time to time</em></td>
+<td>I like to eat junk food <strong>from time to time</strong>.</td>
+<td>我时不时地喜欢吃垃圾食品。</td>
+<td>偶尔</td>
+</tr>
+<tr>
+<td><em>in public</em></td>
+<td>He was too embarrassed to cry <strong>in public</strong>.</td>
+<td>他很尴尬，不敢在公众场合哭泣。</td>
+<td>公开地</td>
+</tr>
+<tr>
+<td><em>in person</em></td>
+<td>I want to meet her <strong>in person</strong> before deciding whether to hire her.</td>
+<td>我想亲自见面，然后再决定是否雇用她。</td>
+<td>亲自</td>
+</tr>
+<tr>
+<td><em>take pride in</em></td>
+<td>She <strong>takes pride in</strong> her work and always does her best.</td>
+<td>她引以为豪的工作，总是尽力而为。</td>
+<td>自豪</td>
+</tr>
+<tr>
+<td><em>be proud of</em></td>
+<td>I am <strong>proud of</strong> my brother for graduating from college.</td>
+<td>我为我弟弟从大学毕业感到骄傲。</td>
+<td>为...感到骄傲</td>
+</tr>
+</tbody>
+</table>
+<h1 id="unit-05">Unit 05</h1>
+<table>
+<thead>
+<tr>
+<th>Phrase</th>
+<th>Example</th>
+<th>翻译</th>
+<th>精准诠释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>no matter</em></td>
+<td><strong>No matter</strong> what happens, I will always love you.</td>
+<td>不管发生什么事，我始终爱你。</td>
+<td>不论</td>
+</tr>
+<tr>
+<td><em>in general</em></td>
+<td><strong>In general</strong>, cats are more independent than dogs.</td>
+<td>总的来说，猫比狗更独立。</td>
+<td>一般而言</td>
+</tr>
+<tr>
+<td><em>be made of</em></td>
+<td>The building is <strong>made of</strong> concrete and steel.</td>
+<td>这座建筑物是由混凝土和钢铁做成的。</td>
+<td>由...组合制成</td>
+</tr>
+<tr>
+<td><em>be made from</em></td>
+<td>This jacket is <strong>made from</strong> recycled materials.</td>
+<td>这件夹克是由回收材料制成的。</td>
+<td>由...加工制成</td>
+</tr>
+<tr>
+<td><em>be made by</em></td>
+<td>This painting was <strong>made by</strong> Picasso.</td>
+<td>这幅画是毕加索创作的。</td>
+<td>由...制作</td>
+</tr>
+<tr>
+<td><em>be made in</em></td>
+<td>This car was <strong>made in</strong> Germany.</td>
+<td>这辆汽车是在德国制造的。</td>
+<td>在...制造</td>
+</tr>
+<tr>
+<td><em>be known for</em></td>
+<td>France is <strong>known for</strong> its wine and cheese.</td>
+<td>法国以其葡萄酒和奶酪而闻名。</td>
+<td>以...而著名</td>
+</tr>
+</tbody>
+</table>
+<h1 id="list-13">List 13</h1>
+<table>
+<thead>
+<tr>
+<th>Phrase</th>
+<th>Example</th>
+<th>翻译</th>
+<th>精准诠释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>feed on</em></td>
+<td>Some birds <strong>feed on</strong> insects and worms.</td>
+<td>一些鸟类以昆虫和蠕虫为食。</td>
+<td>以...为食</td>
+</tr>
+<tr>
+<td><em>take a breath</em></td>
+<td>After running for a long time, I had to stop and <strong>take a breath</strong>.</td>
+<td>在长时间跑步后，我不得不停下来喘口气。</td>
+<td>呼吸</td>
+</tr>
+<tr>
+<td><em>by chance</em></td>
+<td>I <strong>by chance</strong> ran into an old friend while on vacation in Hawaii.</td>
+<td>我在夏威夷度假时碰巧遇见了一个老朋友。</td>
+<td>偶然</td>
+</tr>
+<tr>
+<td><em>begin with</em></td>
+<td>Let's <strong>begin with</strong> introductions.</td>
+<td>让我们从介绍开始吧。</td>
+<td>以...开始</td>
+</tr>
+<tr>
+<td><em>burst out doing sth.</em></td>
+<td>She <strong>burst out laughing</strong> suddenly when she heard a funny joke.</td>
+<td>当她听到一个有趣的笑话时，她突然大笑起来。</td>
+<td>突然做某事</td>
+</tr>
+<tr>
+<td><em>be fed up with</em></td>
+<td>I'm <strong>fed up with</strong> the constant noise from my neighbor's construction site.</td>
+<td>我已经厌倦了邻居的施工现场不断发出的噪音。</td>
+<td>厌倦</td>
+</tr>
+<tr>
+<td><em>take one's chance</em></td>
+<td>Even though I didn't have all the qualifications, I decided to <strong>take my chance</strong> and apply for the job.</td>
+<td>即使我没有所有的资格，但我还是决定抓住机会申请这份工作。</td>
+<td>抓住机会</td>
+</tr>
+<tr>
+<td><em>have nothing to do with</em></td>
+<td>I decided to quit <strong>having nothing to do with</strong> my coworkers.</td>
+<td>我决定不再和我的同事们保持距离。</td>
+<td>不关系</td>
+</tr>
+<tr>
+<td><em>stick to</em></td>
+<td>I try to <strong>stick to</strong> a balanced diet to maintain my health.</td>
+<td>我努力坚持平衡饮食以维持健康。</td>
+<td>坚持</td>
+</tr>
+<tr>
+<td><em>out of breath</em></td>
+<td>After climbing a few flights of stairs, I was <strong>out of breath</strong>.</td>
+<td>爬了几层楼梯后，我已经上气不接下气了。</td>
+<td>上气不接下气</td>
+</tr>
+<tr>
+<td><em>in advance</em></td>
+<td>I booked my flight <strong>in advance</strong> to get a cheaper price.</td>
+<td>我提前预订了我的航班以获得更便宜的价格。</td>
+<td>提前</td>
+</tr>
+</tbody>
+</table>
+<h1 id="list-14">List 14</h1>
+<table>
+<thead>
+<tr>
+<th>Phrase</th>
+<th>Example</th>
+<th>翻译</th>
+<th>精准诠释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>make a mistake/mistakes</em></td>
+<td>Everyone <strong>makes mistakes</strong>, it's part of learning.</td>
+<td>每个人都会犯错误，这是学习的一部分。</td>
+<td>犯错误</td>
+</tr>
+<tr>
+<td><em>look for</em></td>
+<td>I need to <strong>look for</strong> my lost keys before leaving the house.</td>
+<td>在离开房子之前，我需要找到我丢失的钥匙。</td>
+<td>找</td>
+</tr>
+<tr>
+<td><em>a chain of</em></td>
+<td>The company has <strong>a chain of</strong> stores across the country.</td>
+<td>这家公司在全国范围内拥有一系列商店。</td>
+<td>一连串的</td>
+</tr>
+<tr>
+<td><em>look round</em></td>
+<td>Let's <strong>look round</strong> before this museum closes.</td>
+<td>让我们趁这个博物馆关门前四处看看。</td>
+<td>环视</td>
+</tr>
+<tr>
+<td><em>reply to</em></td>
+<td>I always try to <strong>reply to</strong> important emails as soon as possible.</td>
+<td>我总是尽快回复重要的电子邮件。</td>
+<td>回复</td>
+</tr>
+<tr>
+<td><em>flood in/into</em></td>
+<td>After the company launched new products, a flood of orders <strong>poured in</strong>.</td>
+<td>在公司推出新产品后，大量订单涌入。</td>
+<td>涌入</td>
+</tr>
+<tr>
+<td><em>depend on</em></td>
+<td>Whether we go for a picnic tomorrow <strong>depends on</strong> the weather forecast.</td>
+<td>明天我们是否去野餐取决于天气预报。</td>
+<td>取决于</td>
+</tr>
+<tr>
+<td><em>of course</em></td>
+<td><strong>Of course</strong>, I'd be happy to come to your party.</td>
+<td>当然，我很乐意来参加你的聚会。</td>
+<td>当然</td>
+</tr>
+<tr>
+<td><em>share sth. with sb.</em></td>
+<td>Would you like me to <strong>share</strong> my sandwich with you?</td>
+<td>你要不要和我一起分享我的三明治？</td>
+<td>与某人分享某物</td>
+</tr>
+<tr>
+<td><em>watch out</em></td>
+<td><strong>Watch out</strong> for the slippery floor, it's just been cleaned.</td>
+<td>小心滑的地板，它刚刚被清洁过。</td>
+<td>小心</td>
+</tr>
+<tr>
+<td><em>pay a visit to</em></td>
+<td>I plan to <strong>pay a visit to</strong> my grandparents this weekend.</td>
+<td>我计划这个周末去拜访我的祖父母。</td>
+<td>拜访</td>
+</tr>
+<tr>
+<td><em>be beneficial to</em></td>
+<td>Drinking plenty of water is <strong>beneficial</strong> for our health.</td>
+<td>多喝水有益于我们的健康。</td>
+<td>有益于</td>
+</tr>
+<tr>
+<td><em>as a result of</em></td>
+<td>Traffic congestion was <strong>as a result of</strong> a car accident.</td>
+<td>交通堵塞是一次车祸的结果。</td>
+<td>由于</td>
+</tr>
+</tbody>
+</table>
+<h1 id="list-15">List 15</h1>
+<table>
+<thead>
+<tr>
+<th>Phrase</th>
+<th>Example</th>
+<th>翻译</th>
+<th>精准诠释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>adapt to</em></td>
+<td>As we grow older, we need to <strong>adapt to</strong> the changes in our body.</td>
+<td>随着年龄的增长，我们需要逐渐适应身体的变化。</td>
+<td>逐渐适应</td>
+</tr>
+<tr>
+<td><em>speed up</em></td>
+<td>We need to <strong>speed up</strong> the production process to meet the deadline.</td>
+<td>我们需要加快生产速度以满足截止日期。</td>
+<td>加速</td>
+</tr>
+<tr>
+<td><em>stand up</em></td>
+<td>When he saw his crush enter the room, he got nervous and forgot how to <strong>stand up</strong>.</td>
+<td>当他看到他的心仪对象进入房间时，他变得紧张，忘记了如何站起来。</td>
+<td>站立</td>
+</tr>
+<tr>
+<td><em>stand for</em></td>
+<td>The abbreviation &quot;NASA&quot; <strong>stands for</strong> National Aeronautics and Space Administration.</td>
+<td>缩写“NASA”代表美国国家航空和宇宙航行局。</td>
+<td>代表</td>
+</tr>
+<tr>
+<td><em>more than</em></td>
+<td>She spent <strong>more than</strong> an hour doing her makeup for the party.</td>
+<td>她花了一个多小时化妆准备参加派对。</td>
+<td>超过</td>
+</tr>
+<tr>
+<td><em>shut down</em></td>
+<td>Please remember to <strong>shut down</strong> your computer after using it.</td>
+<td>请使用完计算机后记得关机。</td>
+<td>关机</td>
+</tr>
+<tr>
+<td><em>shut off</em></td>
+<td>He had to <strong>shut off</strong> the water supply due to a pipe burst.</td>
+<td>由于管道爆裂，他不得不切断供水。</td>
+<td>切断</td>
+</tr>
+<tr>
+<td><em>live on</em></td>
+<td>She inherited her grandmother's house and decided to <strong>live on</strong> the property.</td>
+<td>她继承了奶奶的房子，决定在这块地方居住。</td>
+<td>居住</td>
+</tr>
+<tr>
+<td><em>more or less</em></td>
+<td>The meeting will take <strong>more or less</strong> an hour depending on the discussions.</td>
+<td>会议将根据讨论情况需要多或少花费一小时左右时间。</td>
+<td>多多少少</td>
+</tr>
+<tr>
+<td><em>once more</em></td>
+<td>The teacher explained the concept <strong>once more</strong> for the students who didn't understand it the first time.</td>
+<td>老师为没有理解概念的学生再次解释了一遍。</td>
+<td>再来一次</td>
+</tr>
+<tr>
+<td><em>catch on</em></td>
+<td>It took him a while, but he finally <strong>caught on</strong> to what she was trying to say.</td>
+<td>他花了一些时间，但最终理解了她想说的话。</td>
+<td>理解</td>
+</tr>
+<tr>
+<td><em>catch up with</em></td>
+<td>He needs to <strong>catch up with</strong> his work since he missed a week of school due to illness.</td>
+<td>由于疾病缺席了一周的学校，他需要赶上自己的进度。</td>
+<td>赶上</td>
+</tr>
+</tbody>
+</table>
+<h1 id="list-16">List 16</h1>
+<table>
+<thead>
+<tr>
+<th>Phrase</th>
+<th>Example</th>
+<th>翻译</th>
+<th>精准诠释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>let out</em></td>
+<td>She couldn't help but <strong>let out</strong> a scream when she saw the spider in her bedroom.</td>
+<td>当她看到卧室里的蜘蛛时，她忍不住发出了尖叫声。</td>
+<td>发出</td>
+</tr>
+<tr>
+<td><em>mark sb./sth. with</em></td>
+<td>He <strong>marked</strong> his favorite book <strong>with</strong> a piece of paper so he could easily find it again.</td>
+<td>他用一张纸给他最喜欢的书做了标记，这样他就能轻松找回它了。</td>
+<td>用……标记</td>
+</tr>
+<tr>
+<td><em>quarrel about/over</em></td>
+<td>She and her friend often <strong>quarrel over</strong> who gets to choose the restaurant when they go out to eat.</td>
+<td>她和她的朋友经常在外出吃饭时为谁可以选择餐厅而争吵。</td>
+<td>为……争吵</td>
+</tr>
+<tr>
+<td><em>take notes</em></td>
+<td>The students were instructed to <strong>take notes</strong> during the lecture for future reference.</td>
+<td>学生们被要求在讲座期间记笔记以备将来参考。</td>
+<td>记笔记</td>
+</tr>
+<tr>
+<td><em>consist of</em></td>
+<td>The salad <strong>consists of</strong> lettuce, tomatoes, and cucumbers.</td>
+<td>这个沙拉包括生菜，西红柿和黄瓜。</td>
+<td>包括</td>
+</tr>
+<tr>
+<td><em>drop in/by</em></td>
+<td>I'm going to <strong>drop by</strong> my friend's house after work to return his book.</td>
+<td>我下班后会顺便去我朋友家还他的书。</td>
+<td>顺便拜访</td>
+</tr>
+<tr>
+<td><em>be friendly to</em></td>
+<td>It's important to <strong>be friendly to</strong> your coworkers to create a positive work environment.</td>
+<td>与同事友好相处是创造积极工作环境的重要因素。</td>
+<td>对……友好</td>
+</tr>
+<tr>
+<td><em>in case</em></td>
+<td>He brought an umbrella <strong>in case</strong> it rained during his walk.</td>
+<td>他带了一把伞以防在散步途中下雨。</td>
+<td>以防万一</td>
+</tr>
+<tr>
+<td><em>be patient with</em></td>
+<td>She needs to <strong>be patient with</strong> her students who are learning a new language.</td>
+<td>她需要对正在学习新语言的学生有耐心。</td>
+<td>对……有耐心</td>
+</tr>
+<tr>
+<td><em>in favor of</em></td>
+<td>The company is <strong>in favor of</strong> implementing a new recycling program to reduce waste.</td>
+<td>公司赞成实施新的回收计划以减少浪费。</td>
+<td>赞成</td>
+</tr>
+</tbody>
+</table>
+
+        
+        
+    </body>
+    </html>
